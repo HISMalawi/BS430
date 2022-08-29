@@ -1,4 +1,4 @@
-// process.chdir(__dirname);
+process.chdir(__dirname);
 var __path__ = require('path');
 var hl7 = require('simple-hl7');
 var utils = require('@egpafmalawi/machine-driver-utility');
@@ -11,7 +11,8 @@ let hl7Service = hl7.tcp();
 const PORT = settings.bs430ServicePort;
 const PASSWORD = settings.iblisPassword;
 const USERNAME = settings.iblisUsername;
-const BASE_URL = settings.iblsBaseURL
+const BASE_URL = settings.iblsBaseURL;
+
 console.log(`========= SERVICE STARTED ON PORT ${PORT} =========`);
 hl7Service.use(function(req, res, next) {
     console.log('===CONNECTED SUCCESSFULY TO BS430 MINDRAY MACHINE====');
